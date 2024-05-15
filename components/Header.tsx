@@ -33,8 +33,8 @@ const Header = () => {
             src={logo}
             alt="logo"
             width={117}
-            height={58}
-            className="mt-7 py-7 lg:py-4"
+            height={70}
+            className="mt-7 h-[120px] py-7 lg:py-4"
           />
         </Link>
 
