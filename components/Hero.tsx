@@ -3,7 +3,7 @@ import HeroSlide from "./HeroSlide";
 const Hero = () => {
   return (
     <div
-      className="z-20 h-[100svh] bg-hero bg-cover bg-left  text-white md:h-[800px] lg:h-[800px]  "
+      className="z-20 h-[70svh] bg-hero bg-cover bg-left  text-white md:h-[80vh] lg:h-[110vh]  "
       id="home"
     >
       <div className="container mx-auto h-full">

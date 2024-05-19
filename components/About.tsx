@@ -1,7 +1,9 @@
+import AboutSection from "./AboutSection";
+
 const About = () => {
   return (
-    <div className="h-[100vh]" id="about">
-      About
+    <div className="" id="about">
+      <AboutSection />
     </div>
   );
 };

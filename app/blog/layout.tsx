@@ -1,5 +1,4 @@
-import Blog from "@/components/Blog";
-import Nav from "@/components/Nav";
+import NavBlog from "@/components/NavBlog";
 
 export default function BlogLayout({
   children, // will be a page or nested layout
@@ -9,7 +8,7 @@ export default function BlogLayout({
   return (
     <section>
       {/* Include shared UI here e.g. a header or sidebar */}
-      <Nav containerStyles="" />
+      <NavBlog />
       {children}
     </section>
   );

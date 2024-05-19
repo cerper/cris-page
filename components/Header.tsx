@@ -11,39 +11,26 @@ import { disableNavWithFooter } from "@/lib/disabledNawandFooter";
 
 const Header = () => {
   const path = usePathname();
-  const [headerActive, setHeaderActive] = useState(false);
-
-  useEffect(() => {
-    const handlerScroll = () => {
-      setHeaderActive(window.scrollY > 50);
-    };
-    //activando handler scroll
-    window.addEventListener("scroll", handlerScroll);
-
-    //quitando scroll event
-    return () => {
-      window.removeEventListener("scroll", handlerScroll);
-    };
-  }, []);
 
   return (
     <div>
       {!disableNavWithFooter.includes(path) && (
-        <header
-          className={`${headerActive ? "h-[125px]" : "h-[140px]"} fixed top-0 z-50 h-[130px] w-full max-w-[1920px] bg-white transition-all`}
-        >
-          <div className="container mx-auto flex h-full flex-col items-center justify-between lg:flex-row  ">
-            <Link href="/">
+        <header className=" fixed top-0 z-50 h-[140px] w-full max-w-[1920px] bg-white transition-all">
+          <div className="container mx-auto flex h-full  flex-col items-center justify-between lg:flex-row  ">
+            <Link
+              href="/"
+              className="transition-all duration-200 ease-in hover:scale-105"
+            >
               <Image
                 src={logo}
                 alt="logo"
-                width={150}
+                width={180}
                 height={70}
-                className="mt-7 h-[120px]  py-7 lg:py-4"
+                className="mt-7 h-[130px]  py-7 lg:py-4"
               />
             </Link>
 
-            <MobileNav containerStyles="capitalize fixed text-black mt-4 flex font-bold gap-4 md:text-xl lg:hidden" />
+            <MobileNav containerStyles="capitalize fixed text-black mt-4 flex font-bold gap-4  md:text-xl lg:hidden" />
             <Nav containerStyles="capitalize flex gap-4 hidden font-bold text-black lg:flex" />
           </div>
         </header>
