@@ -5,10 +5,7 @@ import Link from "next/link";
 const NavBlog = () => {
   return (
     <div className="mx-8 my-4 flex items-center justify-between">
-      <Link
-        href="/"
-        className="transition-all duration-200 ease-in hover:scale-105"
-      >
+      <Link href="/">
         <Image src={logo} alt="logo de la empresa" width={150} height={70} />
       </Link>{" "}
       <div className="flex gap-4">

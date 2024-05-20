@@ -2,9 +2,9 @@ import AboutSection from "./AboutSection";
 
 const About = () => {
   return (
-    <div className="" id="about">
+    <section className="" id="about">
       <AboutSection />
-    </div>
+    </section>
   );
 };
 export default About;

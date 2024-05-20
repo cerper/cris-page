@@ -7,9 +7,9 @@ import { fadeIn } from "@/lib/variants";
 
 const HeroSlide = () => {
   return (
-    <div className="h-full animate-appear">
+    <div className="h-full ">
       <div className="flex h-full justify-end ">
-        <div className="flex h-[550px] w-[250px] md:w-[600px]  lg:h-[900px] lg:w-[800px]  ">
+        <div className="flex h-[550px] w-[250px] md:h-[900px] md:w-[400px]  lg:h-[900px] lg:w-[800px]  ">
           <div className="flex h-full w-full flex-col items-end justify-center md:items-center md:justify-center lg:mt-0 lg:items-center lg:justify-center">
             <motion.h2
               variants={fadeIn("up", 0.1)}
