@@ -4,9 +4,9 @@ import logo from "@/public/logo-a-color-1536x690.png";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer className="bg-purple-100 pt-24" id="contact">
-      <div className="container mx-auto pb-4 ">
-        <div className="grid grid-cols-1 gap-x-8  gap-y-14 lg:grid-cols-3">
+    <footer className="w-full bg-purple-100 pt-36 " id="contact">
+      <div className="container mx-auto pb-24 ">
+        <div className="grid grid-cols-1 gap-x-4  gap-y-14 lg:grid-cols-3">
           {/* info lugar de ubicacion */}
           <div className="flex flex-col gap-3">
             <Link href="/" className="flex items-center justify-center">
@@ -21,7 +21,7 @@ const Footer = () => {
             <div className="flex flex-col items-center justify-center gap-2">
               <FaMapMarkerAlt className="text-2xl text-black" />
               <h6 className="text-center">Location:</h6>
-              <p className="w-[400px] text-center text-base">
+              <p className="w-[200px] text-center text-base lg:w-[400px]">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
                 maxime non similique, sequi culpa totam, modi error ipsam
                 reprehenderit nulla harum cum quidem dolores adipisci
