@@ -21,7 +21,7 @@ const linkData = [
   {
     name: "testimonial",
     target: "testimonial",
-    offset: 0,
+    offset: -70,
   },
   {
     name: "contact",

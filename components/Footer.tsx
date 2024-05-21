@@ -1,4 +1,8 @@
 const Footer = () => {
-  return <footer id="contact">Footer</footer>;
+  return (
+    <footer className="h-[80vh]" id="contact">
+      Footer
+    </footer>
+  );
 };
 export default Footer;

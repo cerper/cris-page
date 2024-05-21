@@ -19,7 +19,7 @@ const HeroSlide = () => {
               className="h2 mt-10 text-end text-4xl text-white lg:text-center lg:text-6xl"
             >
               Consigue la <span className="text-purple-400">Sonrisa</span>{" "}
-              Sonada
+              Soñada
             </motion.h2>
             <Link href="/blog/test" className="">
               <motion.div

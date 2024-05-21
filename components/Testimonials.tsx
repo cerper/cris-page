@@ -9,7 +9,7 @@ import TestimonialSlide from "./TestimonialSlide";
 
 const Testimonials = () => {
   return (
-    <section className="container mx-auto py-8">
+    <section className="container mx-auto py-16">
       <h3 className="h2 text-center">Testimonios</h3>
       <TestimonialSlide />
     </section>
