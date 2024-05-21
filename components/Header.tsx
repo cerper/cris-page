@@ -21,9 +21,9 @@ const Header = () => {
               <Image
                 src={logo}
                 alt="logo"
-                width={180}
-                height={70}
-                className="mt-7 h-[130px]  py-7 lg:py-4"
+                width={150}
+                height={50}
+                className="mt-7 h-[110px]  py-7 lg:py-4"
               />
             </Link>
 

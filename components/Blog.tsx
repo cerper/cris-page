@@ -1,9 +1,9 @@
-import foto1 from "@/public/dentista-examinando-dientes.jpg";
-import foto2 from "@/public/portada-cris.jpg";
+"use client";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { link } from "fs";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/lib/variants";
 
 const blogData = [
   {
@@ -30,8 +30,14 @@ const blogData = [
 
 const Blog = () => {
   return (
-    <div className=" w-full" id="blog">
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 ">
+    <section className=" w-full" id="blog">
+      <motion.div
+        variants={fadeIn("up", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.3 }}
+        className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 "
+      >
         {blogData.map((item, index) => {
           return (
             <div
@@ -46,7 +52,15 @@ const Blog = () => {
                 priority
                 className="object-fill"
               />
-              <h5 className="lg:h2 z-20 text-purple-300">{item.name}</h5>
+              <motion.h5
+                variants={fadeIn("up", 0.1)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.3 }}
+                className="lg:h2 z-20 text-purple-300"
+              >
+                {item.name}
+              </motion.h5>
               <Link href={item.link} className="z-20">
                 <Button
                   variant={"default"}
@@ -58,8 +72,8 @@ const Blog = () => {
             </div>
           );
         })}
-      </div>
-    </div>
+      </motion.div>
+    </section>
   );
 };
 export default Blog;
