@@ -39,7 +39,7 @@ export default function odontologiaTest() {
           opts={{
             align: "start",
           }}
-          className=" w-full max-w-[360px] lg:max-w-lg"
+          className=" w-full max-w-[340px] lg:max-w-lg"
         >
           <CarouselContent className="mt-8">
             <CarouselItem className="md:basis-1/2 lg:basis-full">
@@ -48,7 +48,7 @@ export default function odontologiaTest() {
                 alt="foto"
                 className="h-3/4 w-full"
                 width={300}
-                height={300}
+                height={400}
               />
             </CarouselItem>{" "}
             <CarouselItem className="md:basis-1/2 lg:basis-full">
@@ -56,8 +56,8 @@ export default function odontologiaTest() {
                 src={crisFoto}
                 alt="foto"
                 className="h-3/4 w-full"
-                width={300}
-                height={300}
+                width={400}
+                height={400}
               />
             </CarouselItem>
             <CarouselItem>
@@ -65,7 +65,7 @@ export default function odontologiaTest() {
                 src={foto}
                 alt="foto"
                 width={300}
-                height={300}
+                height={400}
                 className="h-3/4 w-full"
               />
             </CarouselItem>
