@@ -39,7 +39,7 @@ export default function odontologiaTest() {
           opts={{
             align: "start",
           }}
-          className=" w-full max-w-[340px] lg:max-w-lg"
+          className=" w-full max-w-[300px] lg:max-w-lg"
         >
           <CarouselContent className="mt-8">
             <CarouselItem className="md:basis-1/2 lg:basis-full">
