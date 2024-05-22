@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const NavBlog = () => {
   return (
-    <div className=" fixed top-0 z-50   flex h-[100px] w-full max-w-[1920px] items-center justify-between bg-purple-100 transition-all">
+    <div className=" fixed top-0 z-50   flex h-[100px] w-full max-w-[1920px] items-center justify-between bg-white transition-all">
       <Link href="/">
         <Image
           src={logo}
