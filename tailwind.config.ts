@@ -23,6 +23,7 @@ const config: Config = {
     },
     backgroundImage: {
       hero: "url(/portada-cris.jpg)",
+      blogOdontologia: "url(/dentista-examinando-dientes.jpg)",
     },
     extend: {
       colors: {

@@ -134,7 +134,7 @@ const Footer = () => {
               <Link href="/blog/odontologia" className="transition-all ">
                 <div className="mt-4 flex flex-col ">
                   <h4 className="h4 leading-snug text-purple-800 hover:text-violet-600/80 ">
-                    Protodoncia
+                    Prostodoncia
                   </h4>
                   <p className="text-[12px] text-sm uppercase tracking-[3px] text-black">
                     May 21, 2024
@@ -154,7 +154,7 @@ const Footer = () => {
               <Link href="/" className="transition-all ">
                 <div className="mt-4 flex flex-col ">
                   <h4 className="h4 leading-snug text-purple-800 hover:text-violet-600/80 ">
-                    Todo Sobre Protodoncia
+                    Todo Sobre Prostodoncia
                   </h4>
                   <p className="text-[12px] text-sm uppercase tracking-[3px] text-black">
                     May 21, 2024
@@ -164,7 +164,7 @@ const Footer = () => {
               <Link href="/" className="transition-all ">
                 <div className="mt-4 flex flex-col ">
                   <h4 className="h4 leading-snug text-purple-800 hover:text-violet-600/80 ">
-                    Protodoncia
+                    Prostodoncia
                   </h4>
                   <p className="text-[12px] text-sm uppercase tracking-[3px] text-black">
                     May 21, 2024

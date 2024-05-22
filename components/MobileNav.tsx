@@ -33,7 +33,6 @@ const linkData = [
 const MobileNav = ({ containerStyles }: { containerStyles: string }) => {
   return (
     <nav className={`${containerStyles}`}>
-      {" "}
       {linkData.map((link, index) => {
         return (
           <ScrollLink

@@ -4,11 +4,17 @@ import Link from "next/link";
 
 const NavBlog = () => {
   return (
-    <div className="mx-8 my-4 flex items-center justify-between">
+    <div className=" fixed top-0 z-50   flex h-[100px] w-full max-w-[1920px] items-center justify-between bg-purple-100 transition-all">
       <Link href="/">
-        <Image src={logo} alt="logo de la empresa" width={150} height={70} />
+        <Image
+          src={logo}
+          alt="logo de la empresa"
+          width={150}
+          height={70}
+          className="ml-4 lg:ml-8"
+        />
       </Link>{" "}
-      <div className="flex gap-4">
+      <div className="mr-4 flex gap-4 lg:mr-8">
         <Link
           href="https://www.youtube.com/"
           className="transition-all duration-200 ease-in hover:scale-105"
