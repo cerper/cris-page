@@ -20,9 +20,9 @@ const Header = () => {
               <Image
                 src={logo}
                 alt="logo"
-                width={130}
-                height={50}
-                className="mt-7 h-[110px]  py-7 lg:py-4"
+                width={150}
+                height={70}
+                className="mt-7 py-7 lg:py-4"
               />
             </Link>
 

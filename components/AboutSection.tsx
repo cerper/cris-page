@@ -74,7 +74,7 @@ const AboutSection = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
-                className="h4 text-purple-600 md:text-center"
+                className="h4 text-center text-purple-600"
               >
                 {item.name}
               </motion.h4>
@@ -104,7 +104,7 @@ const AboutSection = () => {
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.3 }}
-                  className="text-6xl text-purple-800 lg:text-4xl"
+                  className="text-6xl lg:text-4xl"
                 >
                   {item.icon}
                 </motion.div>
@@ -113,7 +113,7 @@ const AboutSection = () => {
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.3 }}
-                  className="mb-8 w-[400px] text-center md:w-[300px] lg:w-[400px]"
+                  className="mb-8 w-[400px] text-center font-roboto text-lg md:w-[300px] lg:w-[400px]"
                 >
                   {item.text}
                 </motion.p>
