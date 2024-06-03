@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import logo from "@/public/logo-a-color-1536x690.png";
 import MobileNav from "./MobileNav";
 import Nav from "./Nav";

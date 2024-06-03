@@ -1,37 +1,37 @@
 "use client";
 
-import { Diente } from "@/lib/icons";
+import { Diente, Chair, BrokenTeeth, Smile, BrokenTeeth2 } from "@/lib/icons";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/variants";
 
 const aboutData = [
   {
     name: "Lo mejor para tus dientes",
-    text: "Especialista es disenar la sonrisa ideal, apartar cualquier dolor o incomididad  ",
+    text: "El bienestar de nuestro paciente es lo primero.",
     icon: <Diente />,
   },
   {
-    name: "Lo mejor para tus dientes",
-    text: "Especialista es disenar la sonrisa ideal, apartar cualquier dolor o incomididad  ",
-    icon: <Diente />,
+    name: "La mejor atención de la Doctora",
+    text: "Con mas de 15 años en el mercado laboral.",
+    icon: <Chair />,
   },
   {
-    name: "Lo mejor para tus dientes",
-    text: "Especialista es disenar la sonrisa ideal, apartar cualquier dolor o incomididad  ",
-    icon: <Diente />,
+    name: "Expertos en restauración dental",
+    text: " Odontología de vanguardia para resultados duraderos. ",
+    icon: <BrokenTeeth />,
   },
 ];
 
 const secondAbout = [
   {
-    name: "Lo mejor para tus dientes",
-    text: "Especialista es disenar la sonrisa ideal, apartar cualquier dolor o incomididad  ",
-    icon: <Diente />,
+    name: "Sonrisas que enamoran",
+    text: "Restauramos tu sonrisa natural para que vuelvas a sonreír con seguridad.  ",
+    icon: <Smile />,
   },
   {
     name: "Lo mejor para tus dientes",
     text: "Especialista es disenar la sonrisa ideal, apartar cualquier dolor o incomididad  ",
-    icon: <Diente />,
+    icon: <BrokenTeeth2 />,
   },
 ];
 
@@ -43,7 +43,7 @@ const AboutSection = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.4 }}
-        className="h2 text-center text-black"
+        className="h2 text-center  text-purple-600"
       >
         About
       </motion.h3>
@@ -52,7 +52,7 @@ const AboutSection = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.3 }}
-        className="mt-16 grid grid-cols-1 place-content-center place-items-center gap-4 lg:grid-cols-3"
+        className="mt-16 grid grid-cols-1 place-content-center place-items-center gap-8 lg:grid-cols-3"
       >
         {aboutData.map((item, index) => {
           return (
@@ -65,7 +65,7 @@ const AboutSection = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
-                className="text-6xl text-purple-600"
+                className="text-6xl"
               >
                 {item.icon}
               </motion.div>
@@ -74,7 +74,7 @@ const AboutSection = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
-                className="h4 md:text-center"
+                className="h4 text-purple-600 md:text-center"
               >
                 {item.name}
               </motion.h4>
@@ -83,7 +83,7 @@ const AboutSection = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.2 }}
-                className="w-[250px] text-center text-lg md:w-[300px]"
+                className="w-[250px] text-center font-roboto text-lg md:w-[340px]"
               >
                 {item.text}
               </motion.p>

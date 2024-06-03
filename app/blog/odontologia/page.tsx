@@ -24,7 +24,7 @@ export default function odontologiaTest() {
         />
       </div>
       <div className="mx-4 my-8 flex flex-col items-center justify-center gap-4">
-        <h3 className="h2 text-center">Prostodoncia</h3>
+        <h3 className="h2 text-center text-purple-600">Prostodoncia</h3>
         <p className="w-[400px] text-justify text-lg lg:w-[800px] ">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
           assumenda voluptatum ullam corporis fugit laudantium, vero, repellat,
