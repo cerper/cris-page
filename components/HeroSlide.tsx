@@ -16,28 +16,14 @@ const HeroSlide = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.3 }}
-              className="h2 mb-4 mt-10 text-end text-3xl text-white lg:text-center lg:text-6xl"
+              className="h2  gap-2 text-end text-3xl text-white lg:text-center lg:text-6xl"
             >
               ¡Recupera tu sonrisa con
-              <br className="mb-2 bg-black text-black lg:mb-8" />
-              <span className="text-purple-400">Dr.Crisariana Gámez</span>
+              <br />
+              <span className=" mt-4 py-2 text-purple-400">
+                Dr.Crisariana Gamez
+              </span>
             </motion.h2>
-            <Link href="/blog/test" className="">
-              <motion.div
-                variants={fadeIn("up", 0.1)}
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{ once: false, amount: 0.3 }}
-                className="gap-8"
-              >
-                <Button
-                  variant={"ghost"}
-                  className="mt-2 h-[45px] w-[120px] rounded-lg bg-purple-700 text-center font-roboto text-xl font-bold hover:bg-white hover:text-black lg:mt-10 lg:w-[140px]"
-                >
-                  Contáctame
-                </Button>
-              </motion.div>
-            </Link>
           </div>
         </div>
       </div>
