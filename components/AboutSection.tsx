@@ -131,7 +131,10 @@ const AboutSection = () => {
           className="mb-16 flex items-center justify-center"
         >
           <Link href="/">
-            <Button variant={"default"} className="bg-purple-600 text-white">
+            <Button
+              variant={"default"}
+              className="rounded-md bg-purple-700 font-roboto text-lg text-white"
+            >
               Contáctame
             </Button>
           </Link>

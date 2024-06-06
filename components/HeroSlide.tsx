@@ -18,7 +18,7 @@ const HeroSlide = () => {
               viewport={{ once: false, amount: 0.3 }}
               className="h2  gap-2 text-end text-2xl text-white lg:text-center lg:text-6xl"
             >
-              ¡Recupera tu sonrisa con
+              ¡Recupera tu sonrisa con la
               <br />
               <span className=" mt-4 py-2 text-purple-400">
                 Dra.Crisariana Gamez
