@@ -3,6 +3,8 @@
 import { Diente, Chair, BrokenTeeth, Smile, BrokenTeeth2 } from "@/lib/icons";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/variants";
+import { Button } from "./ui/button";
+import Link from "next/link";
 
 const aboutData = [
   {
@@ -92,7 +94,7 @@ const AboutSection = () => {
         })}
       </motion.div>
       <div className="flex flex-col items-center justify-center  lg:flex-row ">
-        <div className="gap-8 py-16 md:flex md:justify-between lg:w-[900px] ">
+        <div className="gap-8 py-4 md:flex md:justify-between lg:w-[900px] ">
           {secondAbout.map((item, index) => {
             return (
               <div
@@ -121,6 +123,19 @@ const AboutSection = () => {
             );
           })}
         </div>
+        <motion.div
+          variants={fadeIn("up", 0.1)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.3 }}
+          className="mb-16 flex items-center justify-center"
+        >
+          <Link href="/">
+            <Button variant={"default"} className="bg-purple-600 text-white">
+              Contáctame
+            </Button>
+          </Link>
+        </motion.div>
       </div>
     </div>
   );
