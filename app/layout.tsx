@@ -17,7 +17,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Dr Crisaria Gámez",
+  title: "Dra Crisaria Gámez",
   description: "Odontologa, Protodoncista",
 };
 

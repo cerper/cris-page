@@ -93,7 +93,7 @@ const AboutSection = () => {
           );
         })}
       </motion.div>
-      <div className="flex flex-col items-center justify-center  lg:flex-row ">
+      <div className="flex flex-col items-center justify-center  ">
         <div className="gap-8 py-4 md:flex md:justify-between lg:w-[900px] ">
           {secondAbout.map((item, index) => {
             return (
@@ -130,10 +130,10 @@ const AboutSection = () => {
           viewport={{ once: false, amount: 0.3 }}
           className="mb-16 flex items-center justify-center"
         >
-          <Link href="/">
+          <Link href="/cita">
             <Button
               variant={"default"}
-              className="rounded-md bg-purple-700 font-roboto text-lg text-white"
+              className="rounded-md bg-purple-700 font-roboto text-lg text-white hover:bg-black"
             >
               Contáctame
             </Button>
