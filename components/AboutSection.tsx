@@ -133,7 +133,7 @@ const AboutSection = () => {
           <Link href="/cita">
             <Button
               variant={"default"}
-              className="rounded-md bg-purple-700 font-roboto text-lg text-white hover:bg-black"
+              className="rounded-xl bg-purple-700 font-roboto text-lg text-white hover:bg-black"
             >
               Contáctame
             </Button>

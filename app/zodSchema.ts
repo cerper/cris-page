@@ -1,5 +1,3 @@
-"use client";
-
 import { z } from "zod";
 
 export const formSchema = z.object({
@@ -9,7 +7,7 @@ export const formSchema = z.object({
   Apellido: z.string().min(1, {
     message: "El segundo nombre es requerido",
   }),
-  Telefono: z.string().min(13, {
+  Telefono: z.string().min(14, {
     message: "Es necesario el número de teléfono",
   }),
 });
