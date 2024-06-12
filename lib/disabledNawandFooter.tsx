@@ -1,1 +1,5 @@
-export const disableNavWithFooter = ["/blog/test", "/blog/odontologia"];
+export const disableNavWithFooter = [
+  "/blog/test",
+  "/blog/odontologia",
+  "/cita",
+];
