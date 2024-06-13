@@ -15,6 +15,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, "El número es necesario"],
   },
+  Cuidad: {
+    type: String,
+    required: [true, "la cuidad es requerida"],
+  },
 });
 
 const User = mongoose.models.users || mongoose.model("users", userSchema);

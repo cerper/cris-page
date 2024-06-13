@@ -2,7 +2,9 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { useRef } from "react";
 import { Button } from "./ui/button";
+import { useFormState } from "react-dom";
 import {
   Form,
   FormControl,
@@ -19,6 +21,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { onSubmitAction } from "@/app/formSubmit";
+import { Divide } from "lucide-react";
 
 const FormSection = () => {
   const form = useForm<z.output<typeof formSchema>>({
@@ -27,28 +30,24 @@ const FormSection = () => {
       Nombre: "",
       Apellido: "",
       Telefono: "+58",
+      Cuidad: "",
     },
   });
+  const [state, formAction] = useFormState(onSubmitAction, {
+    message: "",
+  });
 
-  const [loading, setLoading] = useState(false);
   const router = useRouter();
-
-  async function onSubmit(data: z.output<typeof formSchema>) {
-    const formData = new FormData();
-    formData.append("Nombre", data.Nombre);
-    formData.append("Apellido", data.Apellido);
-    formData.append("Telefono", data.Telefono);
-    console.log(await onSubmitAction(formData));
-    router.push("/");
-  }
+  const formRef = useRef<HTMLFormElement>(null);
 
   return (
     <Form {...form}>
-      <form className="space-y-8" onSubmit={form.handleSubmit(onSubmit)}>
+      <form ref={formRef} className="space-y-8" action={formAction}>
         <div className="my-40 h-[80vh]">
-          <h2 className="text-4xl text-purple-600">
-            {loading ? "Procesando" : "Agenda tu citá"}
-          </h2>
+          <h2 className="text-4xl text-purple-600">Agenda tu citá</h2>
+          {state.message !== "" && (
+            <div className="mt-4 text-2xl text-red-600">{state.message}</div>
+          )}
           <div className="mt-8 flex flex-col gap-4">
             <FormField
               control={form.control}
@@ -85,9 +84,23 @@ const FormSection = () => {
                 <FormItem className="w-full">
                   <FormLabel>Teléfono</FormLabel>
                   <FormControl>
-                    <Input placeholder="+" {...field} />
+                    <Input placeholder="" {...field} />
                   </FormControl>
                   <FormDescription>Tu numero de teléfono</FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            ></FormField>
+            <FormField
+              control={form.control}
+              name="Cuidad"
+              render={({ field }) => (
+                <FormItem className="w-full">
+                  <FormLabel> Cuidad/Municipio</FormLabel>
+                  <FormControl>
+                    <Input placeholder="caracas/sucre" {...field} />
+                  </FormControl>
+                  <FormDescription>Cuidad/Municipio</FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
