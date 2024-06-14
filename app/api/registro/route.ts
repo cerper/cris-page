@@ -1,7 +1,6 @@
 "use server";
 
 import { connect } from "@/dbConfig/dbConfig";
-import User from "@/app/models/userModels";
 
 import { NextRequest, NextResponse } from "next/server";
 
