@@ -4,16 +4,15 @@ const userSchema = new mongoose.Schema({
   Nombre: {
     type: String,
     required: [true, "El nombre es necesario"],
-    unique: true,
   },
   Apellido: {
     type: String,
     required: [true, "El apellido es necesario"],
-    unique: true,
   },
   Telefono: {
     type: String,
     required: [true, "El número es necesario"],
+    unique: true,
   },
   Cuidad: {
     type: String,

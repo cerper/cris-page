@@ -2,12 +2,15 @@
 
 import { formSchema } from "@/app/zodSchema";
 import { connect } from "@/dbConfig/dbConfig";
-import User from "./models/userModels";
+import User from "@/models/userModels";
 import { redirect } from "next/navigation";
+import { NextResponse } from "next/server";
 
 export type FormState = {
-  message: string;
+  message?: string;
 };
+
+connect();
 
 export async function onSubmitAction(
   prevState: FormState,
@@ -25,5 +28,15 @@ export async function onSubmitAction(
     };
   }
 
+  const newUser = new User({
+    Nombre: Nombre,
+    Apellido: Apellido,
+    Telefono: Telefono,
+    Cuidad: Cuidad,
+  });
+
+  const savedUser = await newUser.save();
+
+  console.log(savedUser);
   redirect("/");
 }
