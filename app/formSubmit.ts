@@ -10,8 +10,6 @@ export type FormState = {
   message?: string;
 };
 
-connect();
-
 export async function onSubmitAction(
   prevState: FormState,
   data: FormData,
@@ -28,15 +26,5 @@ export async function onSubmitAction(
     };
   }
 
-  const newUser = new User({
-    Nombre: Nombre,
-    Apellido: Apellido,
-    Telefono: Telefono,
-    Cuidad: Cuidad,
-  });
-
-  const savedUser = await newUser.save();
-
-  console.log(savedUser);
   redirect("/");
 }
