@@ -39,8 +39,8 @@ const FormSection = () => {
   const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
 
-  const onSubmit: SubmitHandler<formSchema> = async (data) => {
-    const resp = await axios.post("/api/cita", data);
+  const onSubmit: SubmitHandler<formSchema> = async (form) => {
+    const resp = await axios.post("/api/cita", form);
     console.log(resp);
   };
 
