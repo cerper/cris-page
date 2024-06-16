@@ -6,6 +6,7 @@ import User from "@/models/userModels";
 import { redirect } from "next/navigation";
 import { NextResponse } from "next/server";
 
+connect();
 export type FormState = {
   message?: string;
 };
@@ -25,6 +26,16 @@ export async function onSubmitAction(
       message: "Formulario invalido",
     };
   }
+  const newUser = new User({
+    Nombre: Nombre,
+    Apellido: Apellido,
+    Telefono: Telefono,
+    Cuidad: Cuidad,
+  });
 
+  const savedUser = await newUser.save();
+
+  console.log(savedUser);
   redirect("/");
+  return { message: "formulario valido" };
 }

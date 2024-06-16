@@ -40,16 +40,6 @@ const FormSection = () => {
   const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
 
-  const onSubmit = async () => {
-    try {
-      const response = await axios.post("/api/registro", form);
-      console.log("Signup Success", response.data);
-      router.push("/");
-    } catch (error: any) {
-      return error.message;
-    }
-  };
-
   return (
     <Form {...form}>
       <form ref={formRef} className="space-y-8" action={formAction}>
@@ -120,7 +110,6 @@ const FormSection = () => {
                 variant={"default"}
                 type="submit"
                 className="w-[180px] rounded-xl bg-purple-700 font-roboto text-lg text-white hover:bg-black"
-                onSubmit={() => onSubmit()}
               >
                 Registrarse
               </Button>
