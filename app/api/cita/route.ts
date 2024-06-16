@@ -2,6 +2,7 @@
 
 import { connect } from "@/dbConfig/dbConfig";
 import User from "@/models/userModels";
+import { redirect } from "next/navigation";
 
 import { NextRequest, NextResponse } from "next/server";
 
@@ -13,10 +14,10 @@ export async function POST(request: NextRequest) {
     const { Nombre, Apellido, Cuidad, Telefono } = reqBody;
     console.log(reqBody);
     const newUser = new User({
-      Nombre: Nombre,
-      Apellido: Apellido,
-      Telefono: Telefono,
-      Cuidad: Cuidad,
+      Nombre,
+      Apellido,
+      Telefono,
+      Cuidad,
     });
 
     const savedUser = await newUser.save();

@@ -1,7 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { useRef } from "react";
 import { Button } from "./ui/button";
 import { useFormState } from "react-dom";
@@ -21,7 +21,6 @@ import { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { onSubmitAction } from "@/app/formSubmit";
-import { Divide } from "lucide-react";
 
 const FormSection = () => {
   const form = useForm<z.output<typeof formSchema>>({
@@ -40,14 +39,22 @@ const FormSection = () => {
   const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
 
+  const onSubmit: SubmitHandler<formSchema> = async (data) => {
+    const resp = await axios.post("/api/cita", data);
+    console.log(resp);
+  };
+
   return (
     <Form {...form}>
-      <form ref={formRef} className="space-y-8" action={formAction}>
+      <form
+        ref={formRef}
+        className="space-y-8"
+        action={formAction}
+        onSubmit={form.handleSubmit(onSubmit)}
+      >
         <div className="my-40 h-[80vh]">
           <h2 className="text-4xl text-purple-600">Agenda tu citá</h2>
-          {state.message !== "" && (
-            <div className="mt-4 text-2xl text-red-600">{state.message}</div>
-          )}
+
           <div className="mt-8 flex flex-col gap-4">
             <FormField
               control={form.control}
