@@ -40,8 +40,13 @@ const FormSection = () => {
   const formRef = useRef<HTMLFormElement>(null);
 
   const onSubmit: SubmitHandler<formSchema> = async (form) => {
-    const resp = await axios.post("/api/cita", form);
-    console.log(resp);
+    try {
+      console.log(form);
+      const resp = await axios.post("/api/cita", form);
+      console.log("Exitoso", resp.data);
+    } catch (error: any) {
+      return console.log("fallo", error.message);
+    }
   };
 
   return (
