@@ -21,6 +21,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { onSubmitAction } from "@/app/formSubmit";
+import { addUser } from "@/app/cita/action";
 
 const FormSection = () => {
   const form = useForm<z.output<typeof formSchema>>({
@@ -39,24 +40,19 @@ const FormSection = () => {
   const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
 
-  const onSubmit: SubmitHandler<formSchema> = async (form) => {
-    try {
-      console.log(form);
-      const resp = await axios.post("/api/cita", form);
-      console.log("Exitoso", resp.data);
-    } catch (error: any) {
-      return console.log("fallo", error.message);
-    }
-  };
+  // const onSubmit: SubmitHandler<formSchema> = async (form) => {
+  //try {
+  //console.log(form);
+  //const resp = await axios.post("/api/cita", form);
+  //console.log("Exitoso", resp.data);
+  // } catch (error: any) {
+  //return console.log("fallo", error.message);
+  //}
+  // };
 
   return (
     <Form {...form}>
-      <form
-        ref={formRef}
-        className="space-y-8"
-        action={formAction}
-        onSubmit={form.handleSubmit(onSubmit)}
-      >
+      <form ref={formRef} className="space-y-8" action={addUser}>
         <div className="my-40 h-[80vh]">
           <h2 className="text-4xl text-purple-600">Agenda tu citá</h2>
 
