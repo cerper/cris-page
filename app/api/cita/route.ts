@@ -1,3 +1,3 @@
 "use server";
 
-export default function aflksfslkn() {}
+export default async function aflksfslkn() {}
