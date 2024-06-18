@@ -1,5 +1,4 @@
 "use server";
-
 import { prisma } from "@/lib/db/prisma";
 import { redirect } from "next/navigation";
 
@@ -17,5 +16,6 @@ export async function addUser(form: FormData) {
   await prisma.user.create({
     data: { Nombre, Apellido, Telefono, Cuidad },
   });
+
   redirect("/");
 }

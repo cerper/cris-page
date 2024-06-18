@@ -129,3 +129,5 @@ const FormSection = () => {
   );
 };
 export default FormSection;
+
+export const maxDuration = 60;
