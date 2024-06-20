@@ -6,6 +6,7 @@ import { redirect } from "next/navigation";
 
 export type FormState = {
   message?: string;
+  issues?: string[];
 };
 
 export async function onSubmitAction(prevState: FormState, data: FormData) {
@@ -21,16 +22,15 @@ export async function onSubmitAction(prevState: FormState, data: FormData) {
   if (!parsed.success) {
     return {
       message: "Formulario invalido",
+      issues: parsed.error.issues.map((issue) => issue.message),
     };
-  }
-
-  if (!Nombre || !Apellido || !Telefono || !Cuidad) {
+  } else if (!Nombre || !Apellido || !Telefono || !Cuidad) {
     throw Error("Debes llenar todo el formulario");
+  } else {
+    await prisma.user.create({
+      data: { Nombre, Apellido, Telefono, Cuidad },
+    });
+
+    redirect("/");
   }
-
-  await prisma.user.create({
-    data: { Nombre, Apellido, Telefono, Cuidad },
-  });
-
-  redirect("/");
 }

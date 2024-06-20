@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <div>
       {!disableNavWithFooter.includes(path) && (
-        <header className=" fixed top-0 z-50 h-[140px] w-full max-w-[1920px] bg-white transition-all">
+        <header className=" fixed top-0 z-50 h-[100px] w-full max-w-[1920px] bg-white transition-all">
           <div className="container mx-auto flex h-full  flex-col items-center justify-between lg:flex-row  ">
             <Link href="/">
               <Image

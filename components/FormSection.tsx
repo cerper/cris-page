@@ -1,7 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { startTransition, useRef } from "react";
 import { Button } from "./ui/button";
 import { useFormState } from "react-dom";
@@ -17,12 +17,9 @@ import {
 import { Input } from "./ui/input";
 import { formSchema } from "@/app/zodSchema";
 import { z } from "zod";
-import { useState } from "react";
-import axios from "axios";
-import { useRouter } from "next/navigation";
 import { onSubmitAction } from "@/app/formSubmit";
 import { addUser } from "@/app/cita/action";
-import { Divide } from "lucide-react";
+import { X } from "lucide-react";
 
 const FormSection = () => {
   const form = useForm<z.output<typeof formSchema>>({
@@ -30,15 +27,15 @@ const FormSection = () => {
     defaultValues: {
       Nombre: "",
       Apellido: "",
-      Telefono: "+58",
+      Telefono: "",
       Cuidad: "",
     },
   });
   const [state, formAction] = useFormState(onSubmitAction, {
     message: "",
+    issues: [],
   });
 
-  const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
 
   const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -56,10 +53,22 @@ const FormSection = () => {
         action={addUser}
         onSubmit={(e) => handleFormSubmit(e)}
       >
-        <div className="my-40 h-[80vh] py-14">
-          <h2 className="mt-40 text-4xl text-purple-600">Agenda tu citá</h2>
-          {state.message && (
-            <div className="mt-12 text-xl">{state.message}</div>
+        <div className="my-10 h-[110vh] py-10 ">
+          <h2 className="mt-10 text-4xl text-purple-600">Agenda tu citá</h2>
+          {state?.message !== "" && !state.issues && (
+            <div className="mt-2 text-xl text-red-500">{state.message}</div>
+          )}
+          {state.issues && (
+            <div className="text-red-500">
+              <ul>
+                {state.issues.map((issue) => (
+                  <li key={issue}>
+                    <X fill="red" />
+                    {issue}
+                  </li>
+                ))}
+              </ul>
+            </div>
           )}
           <div className="mt-8 flex flex-col gap-4">
             <FormField
@@ -99,7 +108,9 @@ const FormSection = () => {
                   <FormControl>
                     <Input placeholder="" {...field} />
                   </FormControl>
-                  <FormDescription>Tu numero de teléfono</FormDescription>
+                  <FormDescription className="text-gray-500">
+                    Ej: 04142222222
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
