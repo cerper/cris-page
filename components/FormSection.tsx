@@ -2,7 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { useRef } from "react";
+import { startTransition, useRef } from "react";
 import { Button } from "./ui/button";
 import { useFormState } from "react-dom";
 import {
@@ -22,6 +22,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { onSubmitAction } from "@/app/formSubmit";
 import { addUser } from "@/app/cita/action";
+import { Divide } from "lucide-react";
 
 const FormSection = () => {
   const form = useForm<z.output<typeof formSchema>>({
@@ -49,13 +50,24 @@ const FormSection = () => {
   //return console.log("fallo", error.message);
   //}
   // };
-
+  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    startTransition(() => {
+      formAction(formData);
+    });
+  };
   return (
     <Form {...form}>
-      <form ref={formRef} className="space-y-8" action={addUser}>
+      <form
+        ref={formRef}
+        className="space-y-8"
+        action={formAction}
+        onSubmit={(e) => handleFormSubmit(e)}
+      >
         <div className="my-40 h-[80vh]">
           <h2 className="text-4xl text-purple-600">Agenda tu citá</h2>
-
+          {state.message && <div>{state.message}</div>}
           <div className="mt-8 flex flex-col gap-4">
             <FormField
               control={form.control}
