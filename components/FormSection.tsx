@@ -41,15 +41,6 @@ const FormSection = () => {
   const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
 
-  // const onSubmit: SubmitHandler<formSchema> = async (form) => {
-  //try {
-  //console.log(form);
-  //const resp = await axios.post("/api/cita", form);
-  //console.log("Exitoso", resp.data);
-  // } catch (error: any) {
-  //return console.log("fallo", error.message);
-  //}
-  // };
   const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
@@ -62,12 +53,14 @@ const FormSection = () => {
       <form
         ref={formRef}
         className="space-y-8"
-        action={formAction}
+        action={addUser}
         onSubmit={(e) => handleFormSubmit(e)}
       >
-        <div className="my-40 h-[80vh]">
-          <h2 className="text-4xl text-purple-600">Agenda tu citá</h2>
-          {state.message && <div>{state.message}</div>}
+        <div className="my-40 h-[80vh] py-14">
+          <h2 className="mt-40 text-4xl text-purple-600">Agenda tu citá</h2>
+          {state.message && (
+            <div className="mt-12 text-xl">{state.message}</div>
+          )}
           <div className="mt-8 flex flex-col gap-4">
             <FormField
               control={form.control}
