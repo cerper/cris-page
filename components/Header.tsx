@@ -14,14 +14,14 @@ const Header = () => {
   return (
     <div>
       {!disableNavWithFooter.includes(path) && (
-        <header className=" fixed top-0 z-50 h-[100px] w-full max-w-[1920px] bg-white transition-all">
+        <header className=" fixed top-0 z-50 h-[122px] w-full max-w-[1920px] bg-white transition-all">
           <div className="container mx-auto flex h-full  flex-col items-center justify-between lg:flex-row  ">
             <Link href="/">
               <Image
                 src={logo}
                 alt="logo"
                 width={150}
-                height={70}
+                height={80}
                 className="mt-7 py-7 lg:py-4"
               />
             </Link>

@@ -9,18 +9,18 @@ import Image from "next/image";
 
 const testimonialData = [
   {
-    name: "Daniel",
-    text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore cum nam aperiam, aliquid molestiae obcaecati voluptatem inventore saepe",
+    name: "Andrea",
+    text: " Excelente atención y profesionalismo. Mi sonrisa nunca ha estado mejor.",
     image: "/blog/foto1.avif",
   },
   {
     name: "Daniel",
-    text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore cum nam aperiam, aliquid molestiae obcaecati voluptatem inventore saepe",
+    text: " Desde la primera visita, me sentí en buenas manos. El equipo es profesional y amable,  los resultados hablan por sí mismos.",
     image: "/blog/foto2.avif",
   },
   {
-    name: "Daniel",
-    text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore cum nam aperiam, aliquid molestiae obcaecati voluptatem inventore saepe",
+    name: "Rebeca",
+    text: " Atención excepcional y resultados impecables. Mi sonrisa refleja la calidad y dedicación de la Dra Gámez.",
     image: "/blog/foto3.avif",
   },
 ];

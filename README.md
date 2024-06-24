@@ -1,3 +1,4 @@
-en about section ya esta creada ka estructura pero ahora voy a darle su estilo propio
-luego tengo qu crear 2 rutas y modificar las que existen
-luego darle su propio estlio sin un contenido en especifico
+Pagina para la doctora crisariana gaméz con frontend y un poco de backend
+
+herramientas:
+mongo db, next js, prisma, zod, shadcn,react hook form,framer motion
