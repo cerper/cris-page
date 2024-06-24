@@ -28,7 +28,7 @@ const Footer = () => {
               </p>
               <div className="flex gap-4">
                 <Link
-                  href="/"
+                  href="https://wa.link/t7ind9"
                   className="transition-all duration-200 ease-in hover:scale-105"
                 >
                   <svg
@@ -64,7 +64,7 @@ const Footer = () => {
                   </svg>
                 </Link>
                 <Link
-                  href=""
+                  href="https://www.instagram.com/dracrisarianagamez/"
                   className="transition-all duration-200 ease-in hover:scale-105"
                 >
                   <svg

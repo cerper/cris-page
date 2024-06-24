@@ -14,10 +14,6 @@ const userSchema = new mongoose.Schema({
     required: [true, "El número es necesario"],
     unique: true,
   },
-  Cuidad: {
-    type: String,
-    required: [true, "la cuidad es requerida"],
-  },
 });
 
 const User = mongoose.models.users || mongoose.model("users", userSchema);

@@ -10,9 +10,6 @@ export const formSchema = z.object({
   Telefono: z.string().min(14, {
     message: "Es necesario el número de teléfono",
   }),
-  Cuidad: z.string().min(5, {
-    message: "Es la cuidad/municipio requerido ",
-  }),
 });
 
 export type formSchema = z.infer<typeof formSchema>;

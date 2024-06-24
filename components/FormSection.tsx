@@ -28,7 +28,6 @@ const FormSection = () => {
       Nombre: "",
       Apellido: "",
       Telefono: "",
-      Cuidad: "",
     },
   });
   const [state, formAction] = useFormState(onSubmitAction, {
@@ -115,20 +114,7 @@ const FormSection = () => {
                 </FormItem>
               )}
             ></FormField>
-            <FormField
-              control={form.control}
-              name="Cuidad"
-              render={({ field }) => (
-                <FormItem className="w-full">
-                  <FormLabel> Cuidad/Municipio</FormLabel>
-                  <FormControl>
-                    <Input placeholder="caracas/sucre" {...field} />
-                  </FormControl>
-                  <FormDescription>Cuidad/Municipio</FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            ></FormField>
+
             <div className="flex items-center justify-center">
               <Button
                 variant={"default"}

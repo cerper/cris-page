@@ -16,7 +16,6 @@ datasource db {
 model User {
   id         String   @id @default(auto()) @map("_id") @db.ObjectId
   Apellido   String
-  Cuidad     String
   Nombre     String
   Telefono   String   @unique(map: "Telefono_1")
   created_at DateTime @default(now())

@@ -7,14 +7,13 @@ export async function addUser(form: FormData) {
   const Nombre = form.get("Nombre")?.toString();
   const Apellido = form.get("Apellido")?.toString();
   const Telefono = form.get("Telefono")?.toString();
-  const Cuidad = form.get("Cuidad")?.toString();
 
-  if (!Nombre || !Apellido || !Telefono || !Cuidad) {
+  if (!Nombre || !Apellido || !Telefono) {
     throw Error("Debes llenar todo el formulario");
   }
 
   await prisma.user.create({
-    data: { Nombre, Apellido, Telefono, Cuidad },
+    data: { Nombre, Apellido, Telefono },
   });
 
   redirect("/");
