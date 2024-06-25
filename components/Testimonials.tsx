@@ -6,7 +6,7 @@ import TestimonialSlide from "./TestimonialSlide";
 const Testimonials = () => {
   return (
     <section className="container mx-auto py-16">
-      <h3 className="h2 text-center text-purple-600">Testimonios</h3>
+      <h3 className="h2 text-center text-white">Testimonios</h3>
       <motion.div
         variants={fadeIn("up", 0.1)}
         initial="hidden"

@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="w-full bg-purple-100 pt-36 " id="contact">
       <div className="container mx-auto pb-24 ">
-        <div className="grid grid-cols-1 gap-x-4  gap-y-14 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-4  gap-y-14 lg:grid-cols-2">
           {/* info lugar de ubicacion */}
           <div className="flex flex-col gap-3">
             <Link href="/" className="flex items-center justify-center">
@@ -18,7 +18,7 @@ const Footer = () => {
                 className="object-center text-black"
               />
             </Link>
-            <div className="flex flex-col items-center justify-center gap-2">
+            <div className="flex flex-col items-center justify-center gap-2 text-black">
               <FaMapMarkerAlt className="text-2xl text-black" />
               <h6 className="text-center">Location:</h6>
               <p className="w-[200px] text-center text-base lg:w-[400px]">
@@ -131,40 +131,10 @@ const Footer = () => {
           <div className="text-center">
             <h5 className="h4 text-center">Blog</h5>
             <div className="flex flex-col items-center justify-center gap-3 border-b border-dotted border-black pb-3">
-              <Link href="/blog/odontologia" className="transition-all ">
+              <Link href="/blog/antes-y-despues" className="transition-all ">
                 <div className="mt-4 flex flex-col ">
                   <h4 className="h4 leading-snug text-purple-800 hover:text-violet-600/80 ">
-                    Prostodoncia
-                  </h4>
-                  <p className="text-[12px] text-sm uppercase tracking-[3px] text-black">
-                    May 21, 2024
-                  </p>
-                </div>
-              </Link>
-              <Link href="/" className="transition-all ">
-                <div className="mt-4 flex flex-col ">
-                  <h4 className="h4 leading-snug text-purple-800 hover:text-violet-600/80 ">
-                    Creando protesis
-                  </h4>
-                  <p className="text-[12px] text-sm uppercase tracking-[3px] text-black">
-                    May 21, 2024
-                  </p>
-                </div>
-              </Link>{" "}
-              <Link href="/" className="transition-all ">
-                <div className="mt-4 flex flex-col ">
-                  <h4 className="h4 leading-snug text-purple-800 hover:text-violet-600/80 ">
-                    Todo Sobre Prostodoncia
-                  </h4>
-                  <p className="text-[12px] text-sm uppercase tracking-[3px] text-black">
-                    May 21, 2024
-                  </p>
-                </div>
-              </Link>{" "}
-              <Link href="/" className="transition-all ">
-                <div className="mt-4 flex flex-col ">
-                  <h4 className="h4 leading-snug text-purple-800 hover:text-violet-600/80 ">
-                    Prostodoncia
+                    Antes y Despues
                   </h4>
                   <p className="text-[12px] text-sm uppercase tracking-[3px] text-black">
                     May 21, 2024
@@ -174,9 +144,6 @@ const Footer = () => {
             </div>
           </div>
           {/* gallery */}
-          <div>
-            <h5 className="h4 text-center">Galeria</h5>
-          </div>
         </div>
       </div>
     </footer>

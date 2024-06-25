@@ -1,10 +1,13 @@
 "use client";
 
-import { Diente, Chair, BrokenTeeth, Smile, BrokenTeeth2 } from "@/lib/icons";
+import { Diente, Chair, BrokenTeeth, Smile } from "@/lib/icons";
+import { FaTeethOpen } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/variants";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import cris from "@/public/cris-nueva/dientes-antes.jpeg";
+import Image from "next/image";
 
 const aboutData = [
   {
@@ -18,7 +21,7 @@ const aboutData = [
     icon: <Chair />,
   },
   {
-    name: "Expertos en restauración dental",
+    name: "Odontología restauradora y altamente estetica",
     text: " Odontología de vanguardia para resultados duraderos. ",
     icon: <BrokenTeeth />,
   },
@@ -33,7 +36,7 @@ const secondAbout = [
   {
     name: "Lo mejor para tus dientes",
     text: "Especialista es disenar la sonrisa ideal, apartar cualquier dolor o incomididad  ",
-    icon: <BrokenTeeth2 />,
+    icon: <FaTeethOpen />,
   },
 ];
 
@@ -45,9 +48,9 @@ const AboutSection = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.4 }}
-        className="h2 text-center  text-purple-600"
+        className="h2 text-center  text-white"
       >
-        About
+        Acerca de mi
       </motion.h3>
       <motion.div
         variants={fadeIn("up", 0.1)}
@@ -67,16 +70,14 @@ const AboutSection = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
-                className="text-6xl"
-              >
-                {item.icon}
-              </motion.div>
+                className=" text-6xl"
+              ></motion.div>
               <motion.h4
                 variants={fadeIn("up", 0.1)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
-                className="h4 text-center text-purple-600"
+                className="h4 text-center text-white"
               >
                 {item.name}
               </motion.h4>
@@ -85,7 +86,7 @@ const AboutSection = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.2 }}
-                className="w-[250px] text-center font-roboto text-lg md:w-[340px]"
+                className="w-[250px] text-center font-roboto text-xl md:w-[340px]"
               >
                 {item.text}
               </motion.p>
@@ -130,7 +131,7 @@ const AboutSection = () => {
           viewport={{ once: false, amount: 0.3 }}
           className="mb-16 flex items-center justify-center"
         >
-          <Link href="/cita">
+          <Link href="https://wa.me/584129135240">
             <Button
               variant={"default"}
               className="rounded-xl bg-purple-700 font-roboto text-lg text-white hover:bg-black"

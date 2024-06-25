@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${oswald.variable} ${roboto.variable} mx-auto w-full max-w-[1920px] bg-white `}
+        className={`${oswald.variable} ${roboto.variable} mx-auto w-full max-w-[1920px] bg-black text-white `}
       >
         <Header />
         {children}
