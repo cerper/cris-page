@@ -9,7 +9,7 @@ const linkData = [
     offset: -100,
   },
   {
-    name: "about",
+    name: "Acerca de mi",
     target: "about",
     offset: -80,
   },
@@ -19,12 +19,12 @@ const linkData = [
     offset: -80,
   },
   {
-    name: "testimonial",
+    name: "testimonios",
     target: "testimonial",
     offset: -20,
   },
   {
-    name: "contact",
+    name: "contacto",
     target: "contact",
     offset: 0,
   },

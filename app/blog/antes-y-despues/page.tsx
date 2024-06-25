@@ -1,78 +1,63 @@
 import Image from "next/image";
-import foto from "@/public/portada-cris.jpg";
-import blog from "@/public/dentista-examinando-dientes.jpg";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import crisFoto from "@/public/portada-cris.jpg";
+import Link from "next/link";
+import antes from "@/public/cris-nueva/dientes-antes.jpeg";
+import despues from "@/public/cris-nueva/dientes-despues.jpeg";
+import reparacion from "@/public/cris-nueva/restauracion-mujer-antes.jpeg";
+import reparacion2 from "@/public/cris-nueva/restauracion-mujer-despues.jpeg";
+import { Button } from "@/components/ui/button";
 
 export default function odontologiaTest() {
   return (
     <div className="mt-8 py-16">
-      <div className="relative mt-8 flex  items-center justify-center">
-        <div className="absolute  top-0 z-10 h-full w-full rounded-xl bg-black/30 md:w-[800px] lg:w-[800px]" />
-        <Image
-          src={blog}
-          alt="foto del blog"
-          width={800}
-          height={400}
-          className="h-[45svh] rounded-xl "
-        />
-      </div>
-      <div className="mx-4 my-8 flex flex-col items-center justify-center gap-4">
-        <h3 className="h2 text-center text-purple-600">Prostodoncia</h3>
-        <p className="w-[400px] text-justify text-lg lg:w-[800px] ">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
-          assumenda voluptatum ullam corporis fugit laudantium, vero, repellat,
-          illum quas eaque incidunt. Quas praesentium voluptatibus aspernatur
-          fuga dolores odio quae veritatis.Lorem ipsum dolor sit, amet
-          consectetur adipisicing elit. Ducimus assumenda voluptatum ullam
-          corporis fugit laudantium, vero, repellat, illum quas eaque incidunt.
-          Quas praesentium voluptatibus aspernatur fuga dolores odio quae
-          veritatis.
-        </p>
-        <Carousel
-          opts={{
-            align: "start",
-          }}
-          className=" w-full max-w-[300px] lg:max-w-lg"
-        >
-          <CarouselContent className="mt-8">
-            <CarouselItem className="md:basis-1/2 lg:basis-full">
-              <Image
-                src={blog}
-                alt="foto"
-                className="h-3/4 w-full"
-                width={300}
-                height={400}
-              />
-            </CarouselItem>{" "}
-            <CarouselItem className="md:basis-1/2 lg:basis-full">
-              <Image
-                src={crisFoto}
-                alt="foto"
-                className="h-3/4 w-full"
-                width={400}
-                height={400}
-              />
-            </CarouselItem>
-            <CarouselItem>
-              <Image
-                src={foto}
-                alt="foto"
-                width={300}
-                height={400}
-                className="h-3/4 w-full"
-              />
-            </CarouselItem>
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+      <div className="relative mx-4 my-8 flex flex-col items-center justify-center gap-4">
+        <h3 className="h2 text-center text-white">Blanqueamiento</h3>
+        <div className="gap-4">
+          <div className="absolute mx-4 my-1  text-2xl">Antes</div>
+          <Image
+            src={antes}
+            alt="Blanqueamiento dental "
+            width={700}
+            height={700}
+          />
+        </div>
+        <div className="relative">
+          <div className="absolute mx-4 my-1  text-2xl ">Despues</div>
+          <Image
+            src={despues}
+            alt="Blanqueamiento dental "
+            width={700}
+            height={700}
+          />
+        </div>
+        <h3 className="h2 mt-24 text-center text-white">
+          Restauración con implantes
+        </h3>
+        <div className="gap-4">
+          <div className="absolute mx-4 my-1  text-2xl">Antes</div>
+          <Image
+            src={reparacion}
+            alt="Blanqueamiento dental "
+            width={700}
+            height={500}
+          />
+        </div>
+        <div className="relative">
+          <div className="absolute mx-4 my-1  text-2xl ">Despues</div>
+          <Image
+            src={reparacion2}
+            alt="Blanqueamiento dental "
+            width={700}
+            height={500}
+          />
+          <Link
+            href="https://wa.me/584129135240"
+            className="mt-8 flex items-center justify-center"
+          >
+            <Button className="bg-purple-700 text-white " variant={"default"}>
+              Agendá tu cita
+            </Button>
+          </Link>
+        </div>
       </div>
     </div>
   );

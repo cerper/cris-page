@@ -107,7 +107,7 @@ const AboutSection = () => {
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.3 }}
-                  className="text-6xl lg:text-4xl"
+                  className="text-6xl text-white lg:text-4xl"
                 >
                   {item.icon}
                 </motion.div>

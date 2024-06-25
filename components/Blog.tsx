@@ -27,7 +27,7 @@ const Blog = () => {
           return (
             <div
               key={index}
-              className="relative flex h-[300px]  w-[500px] flex-col items-center justify-center gap-4 lg:h-[430px]"
+              className="relative flex h-[300px]  w-[600px] flex-col items-center justify-center gap-4 lg:h-[430px]"
             >
               <div className="absolute top-0 z-10 h-full w-full bg-black/50" />
               <Image
@@ -35,14 +35,14 @@ const Blog = () => {
                 alt="foto del blog de odontologia"
                 fill
                 priority
-                className="w-40 bg-center lg:w-80 "
+                className="w-40 bg-center lg:w-[500px] "
               />
               <motion.h5
                 variants={fadeIn("up", 0.1)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
-                className="lg:h2 z-20 text-3xl text-purple-50"
+                className="lg:h2 z-20 mt-12 text-3xl text-purple-50"
               >
                 {item.name}
               </motion.h5>
@@ -51,7 +51,7 @@ const Blog = () => {
                   variant={"default"}
                   className="rounded-xl bg-purple-800 text-white hover:bg-white hover:text-black"
                 >
-                  Ver mas
+                  Ver más
                 </Button>
               </Link>
             </div>

@@ -52,9 +52,9 @@ const FormSection = () => {
         action={addUser}
         onSubmit={(e) => handleFormSubmit(e)}
       >
-        <div className="my-10 h-[110vh] py-10 ">
-          <h2 className="mt-10 text-4xl text-purple-600">Agenda tu citá</h2>
-          {state?.message !== "" && !state.issues && (
+        <div className=" h-[110vh] ">
+          <h2 className=" text-4xl text-purple-600">Agenda tu citá</h2>
+          {state?.message !== "" && !state?.issues && (
             <div className="mt-2 text-xl text-red-500">{state.message}</div>
           )}
           {state.issues && (
@@ -69,7 +69,7 @@ const FormSection = () => {
               </ul>
             </div>
           )}
-          <div className="mt-8 flex flex-col gap-4">
+          <div className="mt-8 flex flex-col gap-4 text-black">
             <FormField
               control={form.control}
               name="Nombre"
@@ -77,7 +77,11 @@ const FormSection = () => {
                 <FormItem className="w-full">
                   <FormLabel> Nombre</FormLabel>
                   <FormControl>
-                    <Input placeholder="" {...field} />
+                    <Input
+                      placeholder=""
+                      className="border border-black"
+                      {...field}
+                    />
                   </FormControl>
                   <FormDescription>Tu primer nombre</FormDescription>
                   <FormMessage />
@@ -91,7 +95,11 @@ const FormSection = () => {
                 <FormItem className="w-full">
                   <FormLabel>Apellido</FormLabel>
                   <FormControl>
-                    <Input placeholder="" {...field} />
+                    <Input
+                      placeholder=""
+                      className="border border-black"
+                      {...field}
+                    />
                   </FormControl>
                   <FormDescription>Tu Apellido</FormDescription>
                   <FormMessage />
@@ -105,7 +113,11 @@ const FormSection = () => {
                 <FormItem className="w-full">
                   <FormLabel>Teléfono</FormLabel>
                   <FormControl>
-                    <Input placeholder="" {...field} />
+                    <Input
+                      placeholder=""
+                      className="border border-black"
+                      {...field}
+                    />
                   </FormControl>
                   <FormDescription className="text-gray-500">
                     Ej: 04142222222

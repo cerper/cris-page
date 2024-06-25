@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "@/public/logo-a-color-1536x690.png";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import FormSection from "./FormSection";
 const Footer = () => {
   return (
-    <footer className="w-full bg-purple-100 pt-36 " id="contact">
+    <footer className="w-full bg-purple-50 pt-36 " id="contact">
       <div className="container mx-auto pb-24 ">
         <div className="grid grid-cols-1 gap-x-4  gap-y-14 lg:grid-cols-2">
           {/* info lugar de ubicacion */}
