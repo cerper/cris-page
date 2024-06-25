@@ -19,7 +19,12 @@ const HeroSlide = () => {
               className="h2  gap-2 text-end text-2xl text-white lg:text-center lg:text-6xl"
             >
               ¿Quieres recuperar tu sonrisa?
-              <br />
+              <br className="gap-3" />
+              <br className="gap-3" />
+              ¡La <span className="text-purple-400 underline">
+                Dra.Gámez
+              </span>{" "}
+              lo hace posible!
             </motion.h2>
           </div>
         </div>
