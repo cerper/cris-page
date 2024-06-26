@@ -131,10 +131,10 @@ const AboutSection = () => {
           viewport={{ once: false, amount: 0.3 }}
           className="mb-16 flex items-center justify-center"
         >
-          <Link href="https://wa.me/584129135240">
+          <Link href="https://wa.link/t7ind9">
             <Button
               variant={"default"}
-              className="rounded-xl bg-purple-700 font-roboto text-lg text-white hover:bg-black"
+              className="rounded-xl bg-purple-700 font-roboto text-lg text-white hover:bg-white hover:text-black"
             >
               Contáctame
             </Button>

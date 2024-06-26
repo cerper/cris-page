@@ -52,8 +52,8 @@ const FormSection = () => {
         action={addUser}
         onSubmit={(e) => handleFormSubmit(e)}
       >
-        <div className=" h-[110vh] ">
-          <h2 className=" text-4xl text-purple-600">Agenda tu citá</h2>
+        <div className="mt-18 h-[110vh] ">
+          <h2 className="mt-48 text-4xl text-purple-600">Agenda tu citá</h2>
           {state?.message !== "" && !state?.issues && (
             <div className="mt-2 text-xl text-red-500">{state.message}</div>
           )}

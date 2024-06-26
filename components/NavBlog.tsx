@@ -16,7 +16,7 @@ const NavBlog = () => {
       </Link>{" "}
       <div className="mr-4 flex gap-4 lg:mr-8">
         <Link
-          href="https://wa.me/584129135240"
+          href="https://wa.link/t7ind9"
           className="transition-all duration-200 ease-in hover:scale-105"
         >
           <svg

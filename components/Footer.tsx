@@ -3,11 +3,12 @@ import Link from "next/link";
 import logo from "@/public/logo-a-color-1536x690.png";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import FormSection from "./FormSection";
+import { Button } from "./ui/button";
 const Footer = () => {
   return (
     <footer className="w-full bg-purple-50 pt-36 " id="contact">
       <div className="container mx-auto pb-24 ">
-        <div className="grid grid-cols-1 gap-x-4  gap-y-14 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-x-4  gap-y-14 lg:grid-cols-3">
           {/* info lugar de ubicacion */}
           <div className="flex flex-col gap-3">
             <Link href="/" className="flex items-center justify-center">
@@ -145,6 +146,19 @@ const Footer = () => {
             </div>
           </div>
           {/* gallery */}
+          <div className="flex flex-col items-center  gap-4">
+            <h3 className="mt-10 uppercase text-purple-800">
+              Agenda tu cita online
+            </h3>
+            <Link href="/cita">
+              <Button
+                variant={"default"}
+                className="mt-8 bg-purple-700 text-white hover:bg-black hover:text-white"
+              >
+                Agenda tu cita
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
