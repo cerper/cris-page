@@ -163,7 +163,7 @@ const Footer = () => {
         <div className="relative mt-40 text-center">
           <p className=" mt-40 text-center font-oswald text-xl text-black">
             Diseñado por{" "}
-            <Link href="https://wa.link/t7ind9">
+            <Link href="https://www.instagram.com/davidlovera96/">
               <span className="text-purple-700 underline">David Lovera </span>
             </Link>
           </p>
