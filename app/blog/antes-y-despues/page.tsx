@@ -50,10 +50,13 @@ export default function odontologiaTest() {
             height={500}
           />
           <Link
-            href="https://wa.me/584129135240"
+            href="https://wa.link/t7ind9"
             className="mt-8 flex items-center justify-center"
           >
-            <Button className="bg-purple-700 text-white " variant={"default"}>
+            <Button
+              className="bg-purple-700 text-white hover:bg-white hover:text-black"
+              variant={"default"}
+            >
               Agendá tu cita
             </Button>
           </Link>
