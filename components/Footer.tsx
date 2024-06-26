@@ -7,7 +7,7 @@ import { Button } from "./ui/button";
 const Footer = () => {
   return (
     <footer className="w-full bg-purple-50 pt-36 " id="contact">
-      <div className="container mx-auto pb-24 ">
+      <div className="container mx-auto pb-14 ">
         <div className="grid grid-cols-1 gap-x-4  gap-y-14 lg:grid-cols-3">
           {/* info lugar de ubicacion */}
           <div className="flex flex-col gap-3">
@@ -131,7 +131,7 @@ const Footer = () => {
           </div>
           {/* blog content */}
           <div className="text-center">
-            <h5 className="h4 text-center">Blog</h5>
+            <h5 className="h4 text-center text-black">Blog</h5>
             <div className="flex flex-col items-center justify-center gap-3 border-b border-dotted border-black pb-3">
               <Link href="/blog/antes-y-despues" className="transition-all ">
                 <div className="mt-4 flex flex-col ">
@@ -147,7 +147,7 @@ const Footer = () => {
           </div>
           {/* gallery */}
           <div className="flex flex-col items-center  gap-4">
-            <h3 className="mt-10 uppercase text-purple-800">
+            <h3 className="mt-10 uppercase text-black">
               Agenda tu cita online
             </h3>
             <Link href="/cita">
@@ -159,6 +159,14 @@ const Footer = () => {
               </Button>
             </Link>
           </div>
+        </div>
+        <div className="relative mt-40 text-center">
+          <p className=" mt-40 text-center font-oswald text-xl text-black">
+            Diseñado por{" "}
+            <Link href="https://wa.link/t7ind9">
+              <span className="text-purple-700 underline">David Lovera </span>
+            </Link>
+          </p>
         </div>
       </div>
     </footer>

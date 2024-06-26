@@ -28,7 +28,7 @@ const testimonialData = [
 const TestimonialSlide = () => {
   return (
     <Swiper
-      className="mb-8 min-h-[500px] py-8"
+      className="mb-8 min-h-[500px]  py-8"
       id="testimonial"
       slidesPerView={1}
       modules={[Pagination]}
@@ -38,7 +38,7 @@ const TestimonialSlide = () => {
     >
       {testimonialData.map((item, index) => {
         return (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className="">
             <div className="mb-4 pb-0 pt-6 lg:mt-8 lg:pb-16">
               <h3 className="h3 mb-4 text-center text-purple-100">
                 {item.name}
