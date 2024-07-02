@@ -6,27 +6,26 @@ import FormSection from "./FormSection";
 import { Button } from "./ui/button";
 const Footer = () => {
   return (
-    <footer className="w-full bg-purple-50 pt-36 " id="contact">
+    <footer className="w-full bg-purple-50 pt-28 " id="contact">
       <div className="container mx-auto pb-14 ">
+        {" "}
+        <Link href="/" className="flex items-center justify-center">
+          <Image
+            src={logo}
+            alt="logo"
+            width={180}
+            height={75}
+            className="object-center text-black"
+          />
+        </Link>
         <div className="grid grid-cols-1 gap-x-4  gap-y-14 lg:grid-cols-3">
           {/* info lugar de ubicacion */}
-          <div className="flex flex-col gap-3">
-            <Link href="/" className="flex items-center justify-center">
-              <Image
-                src={logo}
-                alt="logo"
-                width={180}
-                height={75}
-                className="object-center text-black"
-              />
-            </Link>
+          <div className="mt-20 flex flex-col gap-3">
             <div className="flex flex-col items-center justify-center gap-2 text-black">
               <FaMapMarkerAlt className="text-2xl text-black" />
               <h6 className="text-center">Location:</h6>
-              <p className="w-[200px] text-center text-base lg:w-[400px]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                maxime non similique, sequi culpa totam, modi error ipsam
-                reprehenderit nulla harum cum quidem dolores adipisci
+              <p className="w-[200px] text-center text-lg font-semibold uppercase lg:w-[400px]">
+                El Rosal - Los Palos Grandes
               </p>
               <div className="flex gap-4">
                 <Link
@@ -131,12 +130,12 @@ const Footer = () => {
           </div>
           {/* blog content */}
           <div className="text-center">
-            <h5 className="h4 text-center text-black">Blog</h5>
+            <h5 className="h4 mt-10 text-center text-black lg:mt-20">Blog</h5>
             <div className="flex flex-col items-center justify-center gap-3 border-b border-dotted border-black pb-3">
               <Link href="/blog/antes-y-despues" className="transition-all ">
                 <div className="mt-4 flex flex-col ">
                   <h4 className="h4 leading-snug text-purple-800 hover:text-violet-600/80 ">
-                    Antes y Despues
+                    Antes y Después
                   </h4>
                   <p className="text-[12px] text-sm uppercase tracking-[3px] text-black">
                     May 21, 2024
@@ -147,21 +146,21 @@ const Footer = () => {
           </div>
           {/* gallery */}
           <div className="flex flex-col items-center  gap-4">
-            <h3 className="mt-10 uppercase text-black">
+            <h3 className="mt-10 uppercase text-black lg:mt-20">
               Agenda tu cita online
             </h3>
             <Link href="/cita">
               <Button
                 variant={"default"}
-                className="mt-8 bg-purple-700 text-white hover:bg-black hover:text-white"
+                className="mt-8 bg-purple-800 text-white hover:bg-black hover:text-white"
               >
                 Agenda tu cita
               </Button>
             </Link>
           </div>
         </div>
-        <div className="relative mt-40 text-center">
-          <p className=" mt-40 text-center font-oswald text-xl text-black">
+        <div className="relative mt-28 text-center">
+          <p className=" text-center font-oswald text-xl text-black">
             Diseñado por{" "}
             <Link href="https://www.instagram.com/davidlovera96/">
               <span className="text-purple-700 underline">David Lovera </span>

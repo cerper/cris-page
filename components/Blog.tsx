@@ -7,7 +7,7 @@ import { fadeIn } from "@/lib/variants";
 
 const blogData = [
   {
-    name: "Antes y Despues",
+    name: "Antes y Después",
     foto: "/cris-nueva/cris.jpeg",
     link: "/blog/antes-y-despues",
   },
@@ -49,7 +49,7 @@ const Blog = () => {
               <Link href={item.link} className="z-20">
                 <Button
                   variant={"default"}
-                  className="rounded-xl bg-purple-800 text-white hover:bg-white hover:text-black"
+                  className="w-[120px] rounded-lg bg-purple-800 text-white hover:bg-white hover:text-black"
                 >
                   Ver más
                 </Button>

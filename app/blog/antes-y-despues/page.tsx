@@ -9,9 +9,9 @@ import { Button } from "@/components/ui/button";
 export default function odontologiaTest() {
   return (
     <div className="mt-8 py-16">
-      <div className="relative mx-4 my-8 flex flex-col items-center justify-center gap-4">
-        <h3 className="h2 text-center text-white">Blanqueamiento</h3>
-        <div className="gap-4">
+      <div className="relative mx-4 my-8 flex flex-col items-center justify-center gap-2">
+        <h2 className="h2 text-center text-white">Antes y Después</h2>
+        <div className="gap-2">
           <div className="absolute mx-4 my-1  text-2xl">Antes</div>
           <Image
             src={antes}
@@ -21,17 +21,17 @@ export default function odontologiaTest() {
           />
         </div>
         <div className="relative">
-          <div className="absolute mx-4 my-1  text-2xl ">Despues</div>
+          <div className="absolute mx-4 my-1  text-2xl ">Después</div>
           <Image
             src={despues}
             alt="Blanqueamiento dental "
             width={700}
             height={700}
+            className="mb-28"
           />
         </div>
-        <h3 className="h2 mt-24 text-center text-white">
-          Restauración con implantes
-        </h3>
+        <br />
+
         <div className="gap-4">
           <div className="absolute mx-4 my-1  text-2xl">Antes</div>
           <Image
@@ -42,7 +42,7 @@ export default function odontologiaTest() {
           />
         </div>
         <div className="relative">
-          <div className="absolute mx-4 my-1  text-2xl ">Despues</div>
+          <div className="absolute mx-4 my-1  text-2xl ">Después</div>
           <Image
             src={reparacion2}
             alt="Blanqueamiento dental "
@@ -54,7 +54,7 @@ export default function odontologiaTest() {
             className="mt-8 flex items-center justify-center"
           >
             <Button
-              className="bg-purple-700 text-white hover:bg-white hover:text-black"
+              className="bg-purple-800 text-lg text-white hover:bg-white hover:text-black"
               variant={"default"}
             >
               Agendá tu cita

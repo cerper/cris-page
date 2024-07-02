@@ -11,19 +11,20 @@ import Image from "next/image";
 
 const aboutData = [
   {
-    name: "Lo mejor para tus dientes",
+    name: <h2>Lo mejor para tus dientes</h2>,
     text: "El bienestar de nuestro paciente es lo primero.",
     icon: <Diente />,
   },
+
   {
-    name: "La mejor atención de la Doctora",
-    text: "Con mas de 15 años en el mercado laboral.",
-    icon: <Chair />,
-  },
-  {
-    name: "Odontología restauradora y altamente estetica",
+    name: <h1>Odontología restauradora y altamente estetica en Caracas</h1>,
     text: " Odontología de vanguardia para resultados duraderos. ",
     icon: <BrokenTeeth />,
+  },
+  {
+    name: <h2>La mejor atención de la Doctora</h2>,
+    text: "Con mas de 15 años en el mercado laboral.",
+    icon: <Chair />,
   },
 ];
 
@@ -35,7 +36,7 @@ const secondAbout = [
   },
   {
     name: "Lo mejor para tus dientes",
-    text: "Especialista es disenar la sonrisa ideal, apartar cualquier dolor o incomididad  ",
+    text: "Especialista en disenar la sonrisa ideal, apartar cualquier dolor o incomididad  ",
     icon: <FaTeethOpen />,
   },
 ];
@@ -72,7 +73,7 @@ const AboutSection = () => {
                 viewport={{ once: false, amount: 0.3 }}
                 className=" text-6xl"
               ></motion.div>
-              <motion.h4
+              <motion.section
                 variants={fadeIn("up", 0.1)}
                 initial="hidden"
                 whileInView={"show"}
@@ -80,7 +81,7 @@ const AboutSection = () => {
                 className="h4 text-center text-white"
               >
                 {item.name}
-              </motion.h4>
+              </motion.section>
               <motion.p
                 variants={fadeIn("up", 0.3)}
                 initial="hidden"
@@ -134,7 +135,7 @@ const AboutSection = () => {
           <Link href="https://wa.link/t7ind9">
             <Button
               variant={"default"}
-              className="rounded-xl bg-purple-700 font-roboto text-lg text-white hover:bg-white hover:text-black"
+              className="rounded-2xl bg-purple-800 font-roboto text-lg text-white hover:bg-white hover:text-black"
             >
               Contáctame
             </Button>
