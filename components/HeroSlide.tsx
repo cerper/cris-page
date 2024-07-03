@@ -21,10 +21,8 @@ const HeroSlide = () => {
               ¿Quieres recuperar tu sonrisa?
               <br className="gap-3" />
               <br className="gap-3" />
-              ¡La <span className="text-purple-400 underline">
-                Dra.Gámez
-              </span>{" "}
-              lo hace posible!
+              ¡La <span className="text-purple-400 ">Dra.Gámez</span> lo hace
+              posible!
             </motion.h2>
           </div>
         </div>

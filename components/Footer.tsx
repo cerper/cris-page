@@ -149,10 +149,10 @@ const Footer = () => {
             <h3 className="mt-10 uppercase text-black lg:mt-20">
               Agenda tu cita online
             </h3>
-            <Link href="/cita">
+            <Link href="https://wa.link/t7ind9">
               <Button
                 variant={"default"}
-                className="mt-8 bg-purple-800 text-white hover:bg-black hover:text-white"
+                className="mt-8 rounded-xl bg-purple-800 text-white hover:bg-black hover:text-white"
               >
                 Agenda tu cita
               </Button>

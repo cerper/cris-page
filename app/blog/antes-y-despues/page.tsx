@@ -54,7 +54,7 @@ export default function odontologiaTest() {
             className="mt-8 flex items-center justify-center"
           >
             <Button
-              className="bg-purple-800 text-lg text-white hover:bg-white hover:text-black"
+              className="rounded-xl bg-purple-800 text-lg text-white hover:bg-white hover:text-black"
               variant={"default"}
             >
               Agendá tu cita

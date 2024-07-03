@@ -39,8 +39,8 @@ const TestimonialSlide = () => {
       {testimonialData.map((item, index) => {
         return (
           <SwiperSlide key={index} className="">
-            <div className="mb-4 pb-0 pt-6 lg:mt-8 lg:pb-16">
-              <h3 className="h3 mb-4 text-center text-purple-100">
+            <div className="mb-4 pb-0 pt-6 lg:mt-8 lg:pb-8">
+              <h3 className="h3 mb-2 text-center text-purple-100">
                 {item.name}
               </h3>
               <div className=" container mt-10 flex h-[300px] w-[300px] flex-col items-center justify-center md:h-[450px] md:w-[350px] md:flex-col">
