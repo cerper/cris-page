@@ -5,7 +5,7 @@ import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
-    <main className="">
+    <main>
       <Hero />
       <About />
       <Blog />
